@@ -762,6 +762,8 @@ footer .copyright {
     font-weight: 600;
 }
 
+
+
 /* ============================================
    SINGLE PRODUCT
    ============================================ */
@@ -1212,6 +1214,82 @@ footer .copyright {
     background-color: #088178;
     color: #fff;
     cursor: pointer;
+}
+
+/* Continue Shopping Button -{csritik-max}*/
+a.normal {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+a.normal:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+
+a.normal:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+/* csritik-max */
+
+button.normal {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.4px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+button.normal:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+
+.normal:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #1e293b;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 
