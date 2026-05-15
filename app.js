@@ -47,7 +47,21 @@ function addToCart(productName, productPrice, productImage, quantity, size) {
     }
 
     localStorage.setItem('productsInCart', JSON.stringify(cart));
-    alert(`${item.name} (Size: ${item.size}) added to cart!`);
+    showToast(`${item.name} (Size: ${item.size}) added to cart!`); // ← changed {csritik-max}
+}
+
+/* csritik-max */
+function showToast(msg, isError = false) {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+    const icon = document.getElementById('toast-icon');
+    icon.textContent = isError ? '⚠️' : '✅';
+    document.getElementById('toast-msg').textContent = msg;
+    toast.style.background = isError ? '#dc2626' : '#1e293b';
+    toast.classList.remove('show');
+    void toast.offsetWidth;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
 window.handleAddToCart = function () {
@@ -69,11 +83,11 @@ window.handleAddToCart = function () {
     const image = imageElement.src;
 
     if (size === 'Select Size' || size === "") {
-        alert('Please select a size before adding to cart.');
+        showToast('Please select a size before adding to cart!', true);
         return;
     }
     if (quantity < 1 || isNaN(quantity)) {
-        alert('Please enter a valid quantity.');
+        showToast('Please enter a valid quantity.',true);
         return;
     }
 
@@ -141,6 +155,7 @@ window.addEventListener('load', () => {
         loadCart();
     }
 });
+
 
 /* --- END: CART FUNCTIONALITY --- */
 
