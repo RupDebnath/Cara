@@ -861,7 +861,7 @@ footer .copyright {
 
 #blog .blog-box h1 {
     position: absolute;
-    top: -12%;
+    top: -70px;
     left: 0;
     z-index: -9;
     font-size: 70px;
@@ -1570,7 +1570,7 @@ input:focus {
     }
 
     #blog .blog-box h1 {
-        top: -7%;
+        top: 0;
     }
 
     #about-us {
@@ -1723,7 +1723,7 @@ input:focus {
     }
 
     #blog .blog-box h1 {
-        top: -4%;
+        top: 0;
     }
 
     #about-us img {
