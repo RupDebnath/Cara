@@ -1223,6 +1223,13 @@ footer .copyright {
     cursor: pointer;
 }
 
+.normals{
+    margin:10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
 /* Continue Shopping Button -{csritik-max}*/
 a.normal {
   display: inline-block;
